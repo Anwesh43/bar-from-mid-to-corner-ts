@@ -1,5 +1,6 @@
 import React from 'react'
 import {useStyle} from './hooks'
+import withContext from './withContext'
 
 interface BFMTCProps {
     w : number, 
@@ -16,3 +17,5 @@ const BarFromMidToCorner = (props : BFMTCProps) => {
         </React.Fragment>
     )
 }
+
+export default withContext(BarFromMidToCorner)
