@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, CSSProperties} from 'react'
 
 const scGap : number = 0.01 
 const delay : number = 20 
@@ -55,7 +55,7 @@ export const useStyle = (w : number, h : number, scale : number) => {
     const sf : number = sinify(scale)
     const position = 'absolute'
     return {
-        barStyle(i : number) {
+        barStyle(i : number) : CSSProperties {
             const sk : number = 1 - 2 * i
             const left = `${(w / 2 - size / 2) * (1 + sk * sf)}px`
             const top = `${(h / 2 - hSize / 2) * (1 + sf)}px`
